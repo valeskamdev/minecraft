@@ -1,0 +1,2092 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,500;0,600;0,700;0,800;1,400&family=Rubik:wght@300;400;500;700&display=swap");
+
+@font-face {
+  font-family: "MinecraftTen";
+  src: url("../font/MinecraftTen-VGORe.ttf") format("truetype");
+}
+
+.form p {
+  font-family: "MinecraftTen";
+  font-size: 3rem;
+}
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.container-login-info {
+  background-color: #000000;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-login-info ul li {
+  display: inline-block;
+  margin-right: 4rem;
+}
+
+.container-login-info ul li a {
+  color: #a0e080;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+
+header {
+  background-color: #171615;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4rem 2rem 0.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  display: none;
+}
+
+h1 a img {
+  max-width: 30rem;
+  margin-top: 2.5rem;
+  height: 4.8rem;
+}
+
+.container-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.icone-menu {
+  display: none;
+}
+
+.container-nav nav,
+.container-nav h2 {
+  width: 33.33%;
+}
+
+.container-nav h2 a img {
+  max-width: 25rem;
+  height: 4.8rem;
+  padding-top: 0.5rem;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  margin-left: 3.4rem;
+}
+
+.menu li a {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: 0.4s;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #a0e080;
+}
+
+.container-login-info nav a:hover,
+.container-login-info nav a:focus {
+  color: #ffffff;
+}
+
+.container-nav button,
+.container-destaque button {
+  background-color: #3c8527;
+  border: none;
+  padding: 1rem 2.5rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 0 #2a641c;
+  box-shadow: inset 0 4px #52a535, inset 0 -4px #2a641c, 0 4px #00000040;
+  font-size: clamp(1.5rem, 10vw, 1.7rem);
+  cursor: pointer;
+}
+
+a button {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.destaque {
+  background: url(../assets/lago.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.destaque h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: clamp(5rem, 10vw, 7rem);
+  max-width: 1000px;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+  text-shadow: 0 3px 0 #171615;
+}
+
+.destaque p {
+  color: #ffffff;
+  font-size: 2rem;
+  max-width: 1000px;
+  line-height: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  margin-right: 3rem;
+}
+
+.container-destaque {
+  height: 100%;
+  backdrop-filter: blur(2.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4rem;
+}
+
+.container-destaque button {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 2rem 4rem;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.container-destaque button:hover,
+.container-destaque button:focus,
+.container-nav button,
+form button:hover,
+form button:focus {
+  animation: pulse 1s infinite;
+}
+
+#sobre {
+  background: url(../assets/fundo-bloco-cinza.png);
+  color: #ffffff;
+  padding: 10rem 4rem;
+}
+
+#sobre h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+#sobre p {
+  color: #ffffff;
+  font-size: 2rem;
+  line-height: 3.5rem;
+  font-weight: 300;
+  margin-right: 3rem;
+  margin-bottom: 2rem;
+}
+
+.container-video {
+  background: #6b6562;
+  padding: 1rem;
+  border: 0.125rem solid #313233;
+  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
+    inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
+    inset 0.25rem 0.25rem 0 hsla(0, 0%, 100%, 0.2);
+}
+
+iframe {
+  border: none;
+  border-radius: 3px;
+  max-width: 100%;
+  background-color: transparent;
+  object-fit: fill;
+}
+
+.container-sobre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-sobre div:first-of-type {
+  max-width: 40%;
+}
+
+#biomas {
+  background-color: #e6eff4;
+  position: relative;
+}
+
+#biomas h2 {
+  color: #3a3a3a;
+
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+#biomas p {
+  color: #000000;
+  font-size: 2rem;
+  line-height: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 7rem;
+}
+
+.container-bloco-misturado-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.container-bloco-misturado-top img,
+.container-bloco-misturado-bottom img {
+  width: 100%;
+}
+
+.container-bioma {
+  padding: 20rem 4rem 5rem 4rem;
+}
+
+.caixas-biomas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: auto;
+}
+
+.card-bioma {
+  margin: 0 2rem 4.5rem 2rem;
+  max-width: 315px;
+  min-width: 299px;
+  border: 4px solid #178c4a;
+  padding: 1rem;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.infobox-bioma {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0.5em;
+  border-bottom: 1px solid #178c4a;
+}
+
+.infobox-bioma h3,
+.container-tipo-blocos h3 {
+  font-size: 1.5rem;
+}
+
+.infobox-bioma span {
+  font-size: 1.3rem;
+}
+
+.infobox-bioma span,
+.blocos-bioma {
+  flex-basis: 170px;
+}
+
+.azul {
+  color: #0054a8;
+}
+
+#biomas figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#biomas figure h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 4px;
+  line-height: 1.25;
+  padding: 12px 9px;
+  text-shadow: 2px 2px 0 #0e4e2d;
+  background-color: #178c4a;
+  border: 4px solid #22744a;
+  border-top: 4px solid #39cf51;
+  border-bottom: 4px solid #0e4e2d;
+  margin-bottom: 1rem;
+}
+
+#biomas figure h3 a {
+  color: #ffffff;
+}
+
+#biomas figure h3 a:hover,
+#biomas figure h3 a:focus {
+  color: #bcf8d6;
+}
+
+.card-bioma img {
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.291));
+  margin-bottom: 1rem;
+}
+
+.blocos {
+  display: inline-block;
+  vertical-align: text-top;
+  height: 16px;
+  width: 16px;
+}
+
+.estrutura {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #178c4a;
+}
+
+.container-tipo-blocos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container-tipo-blocos h3,
+.container-bloco span a,
+#biomas figure h3,
+.infobox-bioma h3,
+.infobox-bioma span,
+table tr:last-child a,
+#biomas figure h3 a {
+  font-family: "Rubik", sans-serif;
+}
+
+.container-bloco {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.container-bloco span:last-child {
+  margin-left: 0.6rem;
+}
+
+.container-bloco span a {
+  color: #0054a8;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.container-bloco span a:hover,
+.container-bloco span a:focus,
+table tr:last-child a:hover,
+table tr:last-child a:focus,
+.abrigo-itens a:hover,
+.abrigo-itens a:focus {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.tipo-bloco-blocoGrama {
+  background-image: url(../assets/blocos.png);
+  background-position: -192px -416px;
+}
+
+.tipo-bloco-grama {
+  background-image: url(../assets/blocos.png);
+  background-position: -48px -560px;
+}
+
+.tipo-bloco-tronco-carvalho {
+  background-image: url(../assets/blocos.png);
+  background-position: -112px -432px;
+}
+.tipo-bloco-folhas-carvalho {
+  background-image: url(../assets/blocos.png);
+  background-position: 0px -624px;
+}
+.tipo-bloco-tronco-betula {
+  background-image: url(../assets/blocos.png);
+  background-position: -736px -416px;
+}
+.tipo-bloco-folha-betula {
+  background-image: url(../assets/blocos.png);
+  background-position: -432px -560px;
+}
+.tipo-bloco-ninho-abelha {
+  background-image: url(../assets/blocos.png);
+  background-position: -704px -624px;
+}
+.tipo-bloco-arbusto-rosa {
+  background-image: url(../assets/blocos.png);
+  background-position: -336px -560px;
+}
+.tipo-bloco-lilas {
+  background-image: url(../assets/blocos.png);
+  background-position: -224px -560px;
+}
+.tipo-bloco-peonia {
+  background-image: url(../assets/blocos.png);
+  background-position: -272px -560px;
+}
+.tipo-bloco-lirio-vale {
+  background-image: url(../assets/blocos.png);
+  background-position: -704px -320px;
+}
+
+.tipo-bloco-neve {
+  background-image: url(../assets/blocos.png);
+  background-position: -560px -416px;
+}
+
+.tipo-bloco-blocoNeve {
+  background-image: url(../assets/blocos.png);
+  background-position: -544px -416px;
+}
+
+.tipo-bloco-gelo {
+  background-image: url(../assets/blocos.png);
+  background-position: -224px -416px;
+}
+
+.tipo-estrutura-piramede-selva {
+  background-image: url(../assets/estruturas.png);
+  background-position: -112px -32px;
+}
+
+.tipo-estrutura-arvore-selva {
+  background-image: url(../assets/estruturas.png);
+  background-position: -224px -176px;
+}
+
+.tipo-estrutura-arbusto-selva {
+  background-image: url(../assets/estruturas.png);
+  background-position: -240px -144px;
+}
+
+.tipo-estrutura-ruinas-trilha {
+  background-image: url(../assets/estruturas.png);
+  background-position: -208px -192px;
+}
+
+.tipo-bloco-samambaia {
+  background-image: url(../assets/blocos.png);
+  background-position: -32px -560px;
+}
+
+.tipo-bloco-videira {
+  background-image: url(../assets/blocos.png);
+  background-position: -128px -560px;
+}
+
+.tipo-bloco-tronco-selva {
+  background-image: url(../assets/blocos.png);
+  background-position: -64px -432px;
+}
+
+.tipo-bloco-folhas-selva {
+  background-image: url(../assets/blocos.png);
+  background-position: -496px -560px;
+}
+
+.tipo-bloco-cacau {
+  background-image: url(../assets/blocos.png);
+  background-position: -67px -576px;
+}
+
+.tipo-bloco-melao {
+  background-image: url(../assets/blocos.png);
+  background-position: -192px -576px;
+}
+
+.tipo-bloco-bambu {
+  background-image: url(../assets/blocos.png);
+  background-position: -32px -336px;
+}
+
+.tipo-estrutura-templo-deserto {
+  background-image: url(../assets/estruturas.png);
+  background-position: -96px -32px;
+}
+
+.tipo-estrutura-aldeia {
+  background-image: url(../assets/estruturas.png);
+  background-position: -224px -112px;
+}
+
+.tipo-estrutura-poco-deserto {
+  background-image: url(../assets/estruturas.png);
+  background-position: -64px -32px;
+}
+
+.tipo-estrutura-fossil {
+  background-image: url(../assets/estruturas.png);
+  background-position: -224px -64px;
+}
+
+.tipo-estrutura-posto-saqueador {
+  background-image: url(../assets/estruturas.png);
+  background-position: -80px -112px;
+}
+
+.tipo-bloco-areia {
+  background-image: url(../assets/blocos.png);
+  background-position: -464px -416px;
+}
+
+.tipo-bloco-arenito {
+  background-image: url(../assets/blocos.png);
+  background-position: -496px -416px;
+}
+
+.tipo-bloco-cacto {
+  background-image: url(../assets/blocos.png);
+  background-position: -432px -464px;
+}
+
+.tipo-bloco-arbusto-morto {
+  background-image: url(../assets/blocos.png);
+  background-position: -16px -560px;
+}
+
+.tipo-bloco-grande-samambaia {
+  background-image: url(../assets/blocos.png);
+  background-position: -64px -560px;
+}
+
+.tipo-bloco-arbusto-baga-doce {
+  background-image: url(../assets/blocos.png);
+  background-position: -704px -384px;
+}
+
+.tipo-bloco-tronco-abeto {
+  background-image: url(../assets/blocos.png);
+  background-position: -160px -432px;
+}
+
+.tipo-bloco-folhas-abeto {
+  background-image: url(../assets/blocos.png);
+  background-position: -560px -560px;
+}
+
+.tipo-bloco-grama-alta {
+  background-image: url(../assets/blocos.png);
+  background-position: -112px -560px;
+}
+
+.tipo-bloco-girassol {
+  background-image: url(../assets/blocos.png);
+  background-position: -352px -560px;
+}
+
+.tipo-bloco-azul_azul {
+  background-image: url(../assets/blocos.png);
+  background-position: -160px -560px;
+}
+
+.tipo-bloco-margarida {
+  background-image: url(../assets/blocos.png);
+  background-position: -256px -560px;
+}
+
+.tipo-bloco-centaurea {
+  background-image: url(../assets/blocos.png);
+  background-position: -688px -320px;
+}
+
+.tipo-bloco-tulipas {
+  background-image: url(../assets/blocos.png);
+  background-position: -368px -560px;
+}
+
+.tipo-bloco-vinhas {
+  background-image: url(../assets/blocos.png);
+  background-position: -128px -560px;
+}
+
+.tipo-bloco-cogumelos {
+  background-image: url(../assets/blocos.png);
+  background-position: -240px -576px;
+}
+
+.tipo-estrutura-monumento-oceano {
+  background-image: url(../assets/estruturas.png);
+  background-position: -128px -32px;
+}
+
+.tipo-estrutura-naufragio {
+  background-image: url(../assets/estruturas.png);
+  background-position: -160px -96px;
+}
+
+.tipo-estrutura-ruinas-oceano {
+  background-image: url(../assets/estruturas.png);
+  background-position: -144px -96px;
+}
+
+.tipo-bloco-agua {
+  background-image: url(../assets/blocos.png);
+  background-position: -736px -16px;
+}
+
+.tipo-bloco-cascalho {
+  background-image: url(../assets/blocos.png);
+  background-position: -208px -416px;
+}
+
+.tipo-bloco-sujeira {
+  background-image: url(../assets/blocos.png);
+  background-position: -32px 0px;
+}
+
+.tipo-bloco-argila {
+  background-image: url(../assets/blocos.png);
+  background-position: -336px -432px;
+}
+
+.tipo-bloco-algas-marinhas {
+  background-image: url(../assets/blocos.png);
+  background-position: -432px -144px;
+}
+
+.tipo-bloco-kelp {
+  background-image: url(../assets/blocos.png);
+  background-position: -704px -176px;
+}
+
+.tipo-bloco-tronco-acacia {
+  background-image: url(../assets/blocos.png);
+  background-position: -688px -416px;
+}
+
+.tipo-bloco-folhas-acacia {
+  background-image: url(../assets/blocos.png);
+  background-position: -400px -560px;
+}
+
+.tipo-estrutura-iglu {
+  background-image: url(../assets/estruturas.png);
+  background-position: -144px -32px;
+}
+
+.tipo-estrutura-pico-gelo {
+  background-image: url(../assets/estruturas.png);
+  background-position: -32px -32px;
+}
+
+.tipo-estrutura-mancha-gelo {
+  background-image: url(../assets/estruturas.png);
+  background-position: -80px -144px;
+}
+
+.tipo-bloco-gelo-embalado {
+  background-image: url(../assets/blocos.png);
+  background-position: -336px -416px;
+}
+
+.tipo-estrutura-mina {
+  background-image: url(../assets/estruturas.png);
+  background-position: -176px -32px;
+}
+
+.tipo-bloco-areia-vermelha {
+  background-image: url(../assets/blocos.png);
+  background-position: -400px -416px;
+}
+
+.tipo-bloco-terracota {
+  background-image: url(../assets/blocos.png);
+  background-position: -528px -432px;
+}
+
+.tipo-bloco-minerio-ouro {
+  background-image: url(../assets/blocos.png);
+  background-position: -752px -448px;
+}
+
+.tipo-estrutura-bastiao-remanescente {
+  background-image: url(../assets/estruturas.png);
+  background-position: -16px -128px;
+}
+
+.tipo-estrutura-bolha-pedra-luminosa {
+  background-image: url(../assets/estruturas.png);
+  background-position: -144px -48px;
+}
+
+.tipo-estrutura-mar-lava {
+  background-image: url(../assets/estruturas.png);
+  background-position: -160px -48px;
+}
+
+.tipo-estrutura-fortaleza-nether {
+  background-image: url(../assets/estruturas.png);
+  background-position: -176px -48px;
+}
+
+.tipo-estrutura-portal-arruinado {
+  background-image: url(../assets/estruturas.png);
+  background-position: -32px -128px;
+}
+
+.tipo-bloco-netherrack {
+  background-image: url(../assets/blocos.png);
+  background-position: -304px -416px;
+}
+
+.tipo-bloco-pedra-luminosa {
+  background-image: url(../assets/blocos.png);
+  background-position: -160px -416px;
+}
+
+.tipo-bloco-areia-almas {
+  background-image: url(../assets/blocos.png);
+  background-position: -592px -416px;
+}
+
+.tipo-bloco-minerio-quartzo-nether {
+  background-image: url(../assets/blocos.png);
+  background-position: -32px -464px;
+}
+
+.tipo-bloco-minerio-ouro-nether {
+  background-image: url(../assets/blocos.png);
+  background-position: -528px -720px;
+}
+
+.tipo-bloco-detritos-magma {
+  background-image: url(../assets/blocos.png);
+  background-position: -512px -688px;
+}
+
+.tipo-bloco-magma {
+  background-image: url(../assets/blocos.png);
+  background-position: -240px -416px;
+}
+
+.tipo-bloco-lava {
+  background-image: url(../assets/blocos.png);
+  background-position: -720px -16px;
+}
+
+.tipo-bloco-pedra-preta {
+  background-image: url(../assets/blocos.png);
+  background-position: -592px -720px;
+}
+
+.tipo-bloco-cogumelo-vermelho {
+  background-image: url(../assets/blocos.png);
+  background-position: -400px -576px;
+}
+
+.tipo-bloco-cogumelo-marrom {
+  background-image: url(../assets/blocos.png);
+  background-position: -672px -560px;
+}
+
+.tipo-bloco-fogo {
+  background-image: url(../assets/blocos.png);
+  background-position: -688px -16px;
+}
+
+.tipo-estrutura-cabana-pantano {
+  background-image: url(../assets/estruturas.png);
+  background-position: -80px -32px;
+}
+
+.tipo-estrutura-carvalho-pantano {
+  background-image: url(../assets/estruturas.png);
+  background-position: 0px -32px;
+}
+
+.tipo-estrutura-enorme-cogumelo {
+  background-image: url(../assets/estruturas.png);
+  background-position: -16px -32px;
+}
+
+.tipo-bloco-vitoria-regia {
+  background-image: url(../assets/blocos.png);
+  background-position: -80px -560px;
+}
+
+.tipo-bloco-orquidea-azul {
+  background-image: url(../assets/blocos.png);
+  background-position: -176px -560px;
+}
+
+.tipo-estrutura-cidade-antiga {
+  background-image: url(../assets/estruturas.png);
+  background-position: -64px -144px;
+}
+
+.tipo-estrutura-masmorra {
+  background-image: url(../assets/estruturas.png);
+  background-position: -160px -32px;
+}
+
+.tipo-estrutura-fortaleza {
+  background-image: url(../assets/estruturas.png);
+  background-position: -192px -32px;
+}
+
+.tipo-estrutura-geodo-ametista {
+  background-image: url(../assets/estruturas.png);
+  background-position: -176px -128px;
+}
+
+.tipo-bloco-sculk {
+  background-image: url(../assets/blocos.png);
+  background-position: -544px -80px;
+}
+
+.tipo-bloco-veia-sculk {
+  background-image: url(../assets/blocos.png);
+  background-position: -672px -80px;
+}
+
+.tipo-bloco-sensor-sculk {
+  background-image: url(../assets/blocos.png);
+  background-position: -576px -32px;
+}
+
+.tipo-bloco-sculk-catalyst {
+  background-image: url(../assets/blocos.png);
+  background-position: -576px -80px;
+}
+
+.tipo-bloco-sculk-shrieker {
+  background-image: url(../assets/blocos.png);
+  background-position: -624px -80px;
+}
+
+.tipo-estrutura-tesouro-enterrado {
+  background-image: url(../assets/estruturas.png);
+  background-position: -176px -96px;
+}
+
+.tipo-bloco-cana-acucar {
+  background-image: url(../assets/blocos.png);
+  background-position: -432px -576px;
+}
+
+.tipo-estrutura-calabouco {
+  background-image: url(../assets/estruturas.png);
+  background-position: -160px -32px;
+}
+
+.tipo-bloco-folhas-azaleia {
+  background-image: url(../assets/blocos.png);
+  background-position: -384px -32px;
+}
+
+.tipo-bloco-folhas-flor-azaleia {
+  background-image: url(../assets/blocos.png);
+  background-position: -432px -32px;
+}
+
+.tipo-bloco-azaleia {
+  background-image: url(../assets/blocos.png);
+  background-position: -640px -32px;
+}
+
+.tipo-bloco-azaleia-florida {
+  background-image: url(../assets/blocos.png);
+  background-position: -608px -32px;
+}
+
+.tipo-bloco-sujeira-enraizada {
+  background-image: url(../assets/blocos.png);
+  background-position: -528px -32px;
+}
+
+.tipo-bloco-raizes-suspensas {
+  background-image: url(../assets/blocos.png);
+  background-position: -448px -32px;
+}
+
+.tipo-bloco-musgo {
+  background-image: url(../assets/blocos.png);
+  background-position: -496px -32px;
+}
+
+.tipo-bloco-tapete-musgo {
+  background-image: url(../assets/blocos.png);
+  background-position: -512px -32px;
+}
+
+.tipo-bloco-folha-pequena {
+  background-image: url(../assets/blocos.png);
+  background-position: -672px -32px;
+}
+
+.tipo-bloco-folha-larga {
+  background-image: url(../assets/blocos.png);
+  background-position: -624px -32px;
+}
+
+.tipo-bloco-vinhas-caverna {
+  background-image: url(../assets/blocos.png);
+  background-position: -400px -32px;
+}
+
+.tipo-bloco-flor-esporo {
+  background-image: url(../assets/blocos.png);
+  background-position: -688px -32px;
+}
+
+.tipo-bloco-bagas-brilhantes {
+  background-image: url(../assets/blocos02.png);
+  background-position: -176px -864px;
+}
+
+.tipo-bloco-micelio {
+  background-image: url(../assets/blocos02.png);
+  background-position: -176px -864px;
+}
+
+.tipo-bloco-blocos-cogumelos {
+  background-image: url(../assets/blocos02.png);
+  background-position: -176px -864px;
+}
+
+.tipo-estrutura-plataforma-obsidiana {
+  background-image: url(../assets/estruturas.png);
+  background-position: 0px -48px;
+}
+
+.tipo-estrutura-portal-saida {
+  background-image: url(../assets/estruturas.png);
+  background-position: -32px -48px;
+}
+
+.tipo-estrutura-gateway-final {
+  background-image: url(../assets/estruturas.png);
+  background-position: -48px -48px;
+}
+
+.tipo-estrutura-pico-final {
+  background-image: url(../assets/estruturas.png);
+  background-position: -16px -48px;
+}
+
+.tipo-estrutura-planta-coro {
+  background-image: url(../assets/estruturas.png);
+  background-position: -112px -80px;
+}
+
+.tipo-estrutura-cidade-final {
+  background-image: url(../assets/estruturas.png);
+  background-position: -64px -48px;
+}
+
+.tipo-bloco-pedra-fim {
+  background-image: url(../assets/blocos.png);
+  background-position: -128px -416px;
+}
+
+.tipo-bloco-obsidiana {
+  background-image: url(../assets/blocos.png);
+  background-position: -320px -416px;
+}
+
+.tipo-bloco-base-rochosa {
+  background-image: url(../assets/blocos.png);
+  background-position: -704px -400px;
+}
+
+.tipo-bloco-planta-coro {
+  background-image: url(../assets/blocos.png);
+  background-position: -48px -576px;
+}
+
+.tipo-bloco-flor-refrao {
+  background-image: url(../assets/blocos.png);
+  background-position: -16px -576px;
+}
+
+.bg-mobs {
+  background-image: url(../assets/steve.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10rem 4rem;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.bg-mobs p {
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+  line-height: 3.5rem;
+  font-weight: 300;
+}
+
+.info-mobs {
+  backdrop-filter: blur(12.3px);
+  max-width: 800px;
+  padding: 4rem 2rem;
+}
+
+#mobs h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+#mobs h3,
+.container-mobs h3 {
+  color: #3a3a3a;
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+}
+
+.container-mobs {
+  background-color: #e6eff4;
+  padding: 4rem 4rem 1rem 4rem;
+}
+
+.container-mobs p {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  line-height: 3.5rem;
+}
+
+.container-mobs h4 {
+  color: #3a3a3a;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+}
+
+mark {
+  background-color: #f4bbbb;
+  padding: 0 0.3rem;
+}
+
+.container-table,
+.tabela-tutorial-abrigo {
+  overflow-x: scroll;
+  margin-bottom: 6rem;
+}
+
+.container-table table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+.container-table table td,
+.container-table table th {
+  padding: 8px;
+  border: 1px solid #dddddd;
+}
+
+td {
+  min-width: 120px;
+}
+
+td img {
+  min-width: 90px;
+}
+
+.container-table table tr:last-child a {
+  color: #0054a8;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 5rem;
+  line-height: 3.5rem;
+}
+
+#tutorial {
+  background: url(../assets/fundo-bloco-cinza.png);
+  padding: 7rem 4rem;
+  color: #ffffff;
+}
+
+.tabela-tutorial-abrigo {
+  max-width: 1000px;
+}
+
+.tabela-tutorial-abrigo th {
+  background-color: #c3c2c2;
+}
+
+.abrigo-itens {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.8rem 2rem;
+}
+
+.abrigo-itens a {
+  display: block;
+  color: #0054a8;
+  margin-left: 1.5rem;
+}
+
+#tutorial h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+#tutorial h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 5rem;
+}
+
+#tutorial p {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  line-height: 3.5rem;
+}
+
+.tutorial-tabuas {
+  background: url(../assets/tutorial-blocos.png);
+  background-position: -80px -480px;
+}
+
+.tutorial-machado {
+  background: url(../assets/tutorial-equipamentos.png);
+  background-position: -240px -464px;
+}
+
+.tutorial-porta {
+  background: url(../assets/tutorial-equipamentos.png);
+  background-position: -176px -32px;
+}
+
+.tutorial-tocha {
+  background: url(../assets/tutorial-blocos.png);
+  background-position: -480px -514px;
+}
+
+.tutorial-cerca {
+  background: url(../assets/tutorial-blocos.png);
+  background-position: -704px -464px;
+}
+
+.tutorial-escada {
+  background: url(../assets/tutorial-blocos.png);
+  background-position: -240px -448px;
+}
+
+.tutorial-bloco-vidro {
+  background: url(../assets/tutorial-blocos.png);
+  background-position: -416px -496px;
+}
+
+.tutorial-cama {
+  background: url(../assets/tutorial-blocos.png);
+  background-position: -512px -512px;
+}
+
+.tutorial-pa {
+  background: url(../assets/tutorial-equipamentos.png);
+  background-position: -32px -480px;
+}
+
+.tutorial-picareta {
+  background: url(../assets/tutorial-equipamentos.png);
+  background-position: -16px -479px;
+}
+
+.tutorial-espada {
+  background: url(../assets/tutorial-equipamentos.png);
+  background-position: -96px -448px;
+}
+
+.tutorial-enxada {
+  background: url(../assets/tutorial-equipamentos.png);
+  background-position: 0px -480px;
+}
+
+.tutorial-arco {
+  background: url(../assets/tutorial-equipamentos.png);
+  background-position: -80px -16px;
+}
+
+.tutorial-vara-pesca {
+  background: url(../assets/tutorial-equipamentos.png);
+  background-position: -224px -448px;
+}
+
+.container-table-tutorial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabela-tutorial-abrigo {
+  background-color: #e6e6e6;
+  width: 100%;
+  border-collapse: collapse;
+  color: #000000;
+}
+
+.tabela-tutorial-abrigo th,
+.tabela-tutorial-abrigo td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  font-size: 1.5rem;
+}
+
+.tabela-tutorial-abrigo td:last-child {
+  padding: 0.5rem 2rem;
+}
+
+.link-itens {
+  margin-right: 1rem;
+}
+
+.container-tutorial li {
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  line-height: 3.5rem;
+}
+
+.container-tutorial li ul {
+  margin: 5px 0;
+}
+
+.container-tutorial li ul li {
+  margin: 5px 0;
+  padding: 0;
+}
+
+.container-tutorial li:before {
+  content: "• ";
+  font-size: 20px;
+  color: #ffffff;
+  margin-right: 5px;
+}
+
+.container-tutorial ul li ul li {
+  padding-left: 20px;
+}
+
+.container-tutorial li li:before {
+  content: "- ";
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.container-imagens-fundo-fora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-imagens-fundo-dentro {
+  background: #6b6562;
+  border: 0.125rem solid #313233;
+  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
+    inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
+    inset 0.25rem 0.25rem 0 hsla(0, 0%, 100%, 0.2);
+  padding: 1.5rem;
+}
+
+#galeria {
+  background: url(../assets/fundo-bloco-branco.avif);
+  padding: 10rem 4rem;
+  background-size: cover;
+}
+
+#galeria h2 {
+  color: #3a3a3a;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+#galeria p {
+  color: #3a3a3a;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  line-height: 3.5rem;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 965px;
+  min-width: 290px;
+  position: relative;
+}
+
+#carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+#prev,
+#next {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#prev {
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  display: none;
+}
+
+#next {
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+#content {
+  display: flex;
+  gap: 15px;
+  margin: auto;
+}
+
+#content img {
+  flex: 1 0 auto;
+  width: 300px;
+  border-radius: 4px;
+  height: 200px;
+}
+
+.item {
+  width: 180px;
+  height: 180px;
+  background: green;
+}
+
+.perguntas-frequentes {
+  background: url(../assets/fundo-arvores.jpeg);
+  color: #ffffff;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10rem 4rem;
+}
+
+.perguntas-frequentes h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-shadow: rgb(23, 22, 21) 0px 3px 0px;
+  text-align: center;
+}
+
+details {
+  font-weight: 300;
+  max-width: 600px;
+  min-width: 60%;
+  margin: 0 auto;
+  backdrop-filter: blur(15px);
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0.1rem 1rem -0.5rem rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  overflow: hidden;
+  padding-right: 1.5rem;
+  font-size: 1.5rem;
+}
+
+summary {
+  padding: 1.3rem;
+  margin-left: 2rem;
+  display: block;
+  backdrop-filter: blur(10px);
+  padding-left: 2.7rem;
+  position: relative;
+  cursor: pointer;
+}
+
+summary:before {
+  content: url(../assets/arrow.svg);
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  transform: rotate(0);
+  transform-origin: 0.2rem 50%;
+  transition: 0.25s transform ease;
+}
+
+details[open] > summary:before {
+  transform: rotate(90deg);
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details p {
+  padding-bottom: 1rem;
+  padding-left: 4.7rem;
+}
+
+#contato {
+  background-color: #e6eff4;
+  padding: 8rem 4rem 5rem 4rem;
+}
+
+#contato h2 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+#contato p {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 5rem;
+  line-height: 3.5rem;
+}
+
+.container-contato {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@keyframes animaSombra {
+  0% {
+    -webkit-filter: drop-shadow(0px 0px 5px #bb00ff);
+    filter: drop-shadow(0px 0px 5px #bb00ff);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0px 0px 5px #aa3bd2);
+    filter: drop-shadow(0px 0px 5px #aa3bd2);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0px 0px 10px #793b8f);
+    filter: drop-shadow(0px 0px 10px #793b8f);
+  }
+}
+
+.container-contato figure img {
+  min-width: 300px;
+  max-width: 350px;
+  animation: animaSombra 2s alternate infinite;
+}
+
+form {
+  background: #6b6562;
+  border: 0.125rem solid #313233;
+  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
+    inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
+    inset 0.25rem 0.25rem 0 hsla(0, 0%, 100%, 0.2);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  max-width: 490px;
+  /* min-width: 250px; */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1 1;
+}
+
+.container-contato form {
+  margin-right: 3rem;
+}
+
+.container-contato label {
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 16px;
+  background: rgb(210, 210, 210);
+  border: 0.125rem solid #313233;
+  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
+    inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
+    inset 0.25rem 0.25rem 0 hsla(0, 0%, 100%, 0.2);
+  width: 100%;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+textarea {
+  outline: 1px solid rgb(13, 13, 87);
+}
+
+input:focus:not([type="radio"]),
+textarea:focus {
+  box-shadow: rgb(57, 122, 209) 0px 0px 3px 1px,
+    rgb(57, 122, 209) 0px 0px 2px 1px inset;
+}
+
+textarea {
+  resize: none;
+  height: 10rem;
+}
+
+form button {
+  background-color: #3c8527;
+  border: none;
+  /* padding: 1.8rem 3.5rem; */
+  padding: 1.8rem 0;
+  max-width: 100%;
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 0 #2a641c;
+  box-shadow: inset 0 4px #52a535, inset 0 -4px #2a641c, 0 4px #00000040;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+#contato ul {
+  margin-top: 8rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rede-social svg path {
+  fill: #c8c8c8;
+}
+
+.rede-social svg:hover path,
+.rede-social svg:focus path {
+  fill: #178c4a;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #171615;
+  padding: 3rem 4rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer nav {
+  padding-bottom: 2rem;
+  width: 40%;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+footer nav ul li {
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+footer nav ul li a {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
+  line-height: 3.5rem;
+}
+
+footer nav ul li a:hover,
+footer nav ul li a:focus,
+.autor a:hover,
+.autor a:focus {
+  color: #509757;
+  text-decoration: underline;
+}
+
+footer h2 a img {
+  display: block;
+  margin: auto;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+footer > ul {
+  width: 30%;
+}
+
+.autor {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+
+.autor a {
+  color: #73e2a3;
+}
+
+hr {
+  margin-top: 1.5rem;
+  width: 38vw;
+  background-color: #c6c6c6c9;
+  border: none;
+  height: 1px;
+}
+
+footer p:last-child {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.login {
+  background: url(../assets/fundo-anoitecer.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 90vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-genero {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.genero {
+  background: rgb(129, 127, 127);
+  border: 0.125rem solid #313233;
+  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
+    inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
+    inset 0.25rem 0.25rem 0 hsla(0, 0%, 100%, 0.2);
+  border-radius: 3px;
+  margin-top: 0.5rem;
+  /* width: 150px; */
+  padding: 1rem 1.5rem;
+}
+
+input[type="radio"] {
+  accent-color: #3c8527;
+}
+
+.genero,
+.genero input,
+.genero label {
+  cursor: pointer;
+}
+
+.genero label {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.genero span {
+  margin-left: 0.5rem;
+}
+
+.genero {
+  display: flex;
+  align-items: center;
+}
+
+.form-login {
+  margin: 4rem 3rem;
+}
+
+.form-login h2 {
+  font-family: "MinecraftTen";
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: clamp(4rem, 10vw, 5rem);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.form-login label:not(.container-genero label),
+.form-login p {
+  font-size: 1.7rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+}
+
+.form-login p {
+  margin-top: 2rem;
+}
+
+.form-login button {
+  margin-top: 2rem;
+}
+
+.form-login h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+.form-login h3 a {
+  color: #98c79a;
+}
+
+.form-login h3 a:hover,
+.form-login h3 a:focus {
+  color: #64ca48;
+  text-decoration: underline;
+}
+
+.voltar-menu {
+  display: flex;
+  width: 33.33%;
+}
+
+.voltar-menu a {
+  color: #98c79a;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-left: 3.4rem;
+  display: inline-flex;
+  align-items: center;
+  width: 200px;
+}
+
+.voltar-menu a svg {
+  display: inline-flex;
+  margin-right: 1.3rem;
+}
+
+.voltar-menu a svg path {
+  fill: #ffffff;
+}
+
+.voltar-menu a:hover svg path,
+.voltar-menu a:focus svg path {
+  fill: #64ca48;
+}
+
+.voltar-menu a:hover,
+.voltar-menu a:focus {
+  color: #64ca48;
+}
+
+@media screen and (max-width: 1328px) {
+  .container-nav h2 {
+    display: none;
+  }
+
+  h1 {
+    display: block;
+  }
+
+  .container-sobre {
+    flex-direction: column;
+  }
+
+  .container-sobre div:first-of-type {
+    margin-bottom: 4rem;
+    max-width: 100%;
+  }
+
+  #sobre p {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 70%;
+  }
+
+  .destaque h2 {
+    margin-top: 10rem;
+  }
+
+  .container-contato form {
+    margin: 0 auto;
+  }
+
+  .container-contato img {
+    display: none;
+  }
+
+  .container-contato {
+    margin: 0 auto;
+  }
+
+  .bg-mobs {
+    background-position: right 35% bottom 45%;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .container-nav button {
+    display: none;
+  }
+
+  .icone-menu {
+    display: block;
+    text-align: right;
+  }
+
+  .menu.aberto {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.aberto {
+    display: flex;
+    flex-direction: column;
+    background-color: #171615;
+    align-items: center;
+    position: absolute;
+    top: 99px;
+    right: 0;
+    left: 0;
+  }
+
+  .menu.aberto li {
+    margin: 0;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container-nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 a img {
+    display: none;
+  }
+
+  .container-nav h2 {
+    display: block;
+    width: 100%;
+  }
+
+  .container-nav h2 a img {
+    max-width: 19rem;
+    margin-left: 2.6rem;
+  }
+
+  footer > ul li {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .voltar-menu {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 804px) {
+  .container-bioma {
+    padding: 10rem 4rem 5rem 4rem;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .card-bioma {
+    margin-bottom: 4rem;
+    max-width: 380px;
+  }
+
+  .container-nav button {
+    background: none;
+    animation: none;
+    text-shadow: none;
+    box-shadow: none;
+    color: #a0e081;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  html {
+    font-size: 70%;
+  }
+  
+  .destaque, .bg-mobs, .perguntas-frequentes, .login {
+    background-attachment: scroll;
+  }
+
+}
+
+@media screen and (max-width: 541px) {
+  .genero:last-child {
+    margin-top: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .container-nav h2 a img {
+    max-width: 17rem;
+  }
+
+  .voltar-menu {
+    display: none;
+  }
+
+  .menu.aberto {
+    top: 71px;
+  }
+
+  .container-nav h2 a img {
+    max-width: 15rem;
+  }
+
+  .container-login-info nav {
+    width: 100%;
+  }
+
+  .container-login-info nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .centralizar-logo {
+    width: unset;
+  }
+  
+  footer nav ul {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 484px) {
+  .container-login-info ul li {
+    margin-right: 0;
+  }
+}
