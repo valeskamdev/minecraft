@@ -1002,13 +1002,13 @@ table tr:last-child a:focus,
 }
 
 .tipo-bloco-micelio {
-  background-image: url(../assets/blocos02.png);
-  background-position: -176px -864px;
+  background-image: url(../assets/blocos.png);
+  background-position: -272px -416px;
 }
 
 .tipo-bloco-blocos-cogumelos {
-  background-image: url(../assets/blocos02.png);
-  background-position: -176px -864px;
+  background-image: url(../assets/blocos.png);
+  background-position: -752px -112px;
 }
 
 .tipo-estrutura-plataforma-obsidiana {
@@ -1136,7 +1136,7 @@ mark {
 }
 
 .container-table,
-.tabela-tutorial-abrigo {
+.container-table-tutorial {
   overflow-x: scroll;
   margin-bottom: 6rem;
 }
@@ -1179,10 +1179,6 @@ td img {
   max-width: 1000px;
 }
 
-.tabela-tutorial-abrigo th {
-  background-color: #c3c2c2;
-}
-
 .abrigo-itens {
   display: flex;
   align-items: center;
@@ -1192,7 +1188,7 @@ td img {
 
 .abrigo-itens a {
   display: block;
-  color: #0054a8;
+  color: #424242;
   margin-left: 1.5rem;
 }
 
@@ -1295,7 +1291,11 @@ td img {
 }
 
 .tabela-tutorial-abrigo {
-  background-color: #e6e6e6;
+  background: #cfcece;
+  border: 0.125rem solid #313233;
+  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
+    inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
+    inset 0.25rem 0.25rem 0 hsl(0deg 0% 43.46% / 20%);;
   width: 100%;
   border-collapse: collapse;
   color: #000000;
@@ -1303,13 +1303,19 @@ td img {
 
 .tabela-tutorial-abrigo th,
 .tabela-tutorial-abrigo td {
-  border: 1px solid #dddddd;
+  border: 0.6px solid #969696;
   padding: 8px;
   font-size: 1.5rem;
 }
 
-.tabela-tutorial-abrigo td:last-child {
-  padding: 0.5rem 2rem;
+.tabela-tutorial-abrigo tr:first-child {
+  background-color: #9b9b9b;
+  box-shadow: inset -0.25rem 0rem 0 rgba(0, 0, 0, 0.302);
+}
+
+.tabela-tutorial-abrigo td:last-child,
+.tabela-tutorial-abrigo th {
+  padding: 1rem 2rem;
 }
 
 .link-itens {
@@ -1356,7 +1362,7 @@ td img {
 }
 
 .container-imagens-fundo-dentro {
-  background: #6b6562;
+  background: #9d9d9d;
   border: 0.125rem solid #313233;
   box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
     inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
@@ -2034,11 +2040,13 @@ input[type="radio"] {
   html {
     font-size: 70%;
   }
-  
-  .destaque, .bg-mobs, .perguntas-frequentes, .login {
+
+  .destaque,
+  .bg-mobs,
+  .perguntas-frequentes,
+  .login {
     background-attachment: scroll;
   }
-
 }
 
 @media screen and (max-width: 541px) {
@@ -2079,7 +2087,7 @@ input[type="radio"] {
   .centralizar-logo {
     width: unset;
   }
-  
+
   footer nav ul {
     flex-direction: column;
   }
