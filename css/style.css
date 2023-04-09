@@ -408,6 +408,7 @@ iframe {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 0.5em;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
@@ -1281,7 +1282,7 @@ td img {
 
 .tutorial-vara-pesca {
   background: url(../assets/tutorial-equipamentos.png);
-  background-position: -224px -448px;
+  background-position: -227px -448px;
 }
 
 .container-table-tutorial {
@@ -1492,7 +1493,7 @@ summary {
   padding: 1.3rem;
   margin-left: 2rem;
   display: block;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   padding-left: 2.7rem;
   position: relative;
   cursor: pointer;
@@ -2043,7 +2044,6 @@ input[type="radio"] {
 
   .destaque,
   .bg-mobs,
-  .perguntas-frequentes,
   .login {
     background-attachment: scroll;
   }
