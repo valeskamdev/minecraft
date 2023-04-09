@@ -2060,6 +2060,10 @@ input[type="radio"] {
     max-width: 17rem;
   }
 
+  .container-login-info ul li {
+    margin-right: 0;
+}
+
   .voltar-menu {
     display: none;
   }
@@ -2087,14 +2091,8 @@ input[type="radio"] {
   .centralizar-logo {
     width: unset;
   }
-
+  
   footer nav ul {
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 484px) {
-  .container-login-info ul li {
-    margin-right: 0;
   }
 }
