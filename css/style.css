@@ -1432,6 +1432,10 @@ td img {
   }
 }
 
+.card-skin:hover, .card-skin:focus {
+  box-shadow: 0 0 5px #123c60a0;
+} 
+
 .card-skin img:hover,
 .card-skin img:focus {
   animation: animaSombraSkin 1s alternate infinite,
