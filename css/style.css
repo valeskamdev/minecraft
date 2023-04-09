@@ -1391,7 +1391,7 @@ td img {
 
 .card-skin {
   box-shadow: 0 0 2px #424242c2;
-  max-width: 350px;
+  max-width: 280px;
   padding: 2rem;
   border-radius: 4px;
   margin: 1.5rem 0;
@@ -1402,7 +1402,7 @@ td img {
 }
 
 .card-skin img {
-  min-width: 290px;
+  min-width: 320px;
 }
 
 @keyframes animaSombraSkin {
@@ -1441,9 +1441,10 @@ td img {
 #skin h3 a {
   color: #3a3a3a;
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 1.9rem;
   font-weight: 800;
-  margin: 2rem 0 3rem 0;
+  margin: 1rem 0;
+  display: block;
 }
 
 #skin h3 a:hover {
