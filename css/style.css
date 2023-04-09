@@ -419,7 +419,8 @@ iframe {
 .infobox-bioma h3,
 .infobox-bioma span,
 table tr:last-child a,
-#biomas figure h3 a {
+#biomas figure h3 a,
+#skin h3 {
   font-family: "Rubik", sans-serif;
 }
 
@@ -1292,7 +1293,7 @@ td img {
 }
 
 .tabela-tutorial-abrigo {
-  background: #cfcece;
+  background: #ebe8e8;
   border: 0.125rem solid #313233;
   box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
     inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
@@ -1310,7 +1311,7 @@ td img {
 }
 
 .tabela-tutorial-abrigo tr:first-child {
-  background-color: #9b9b9b;
+  background-color: #c0bebe;
   box-shadow: inset -0.25rem 0rem 0 rgba(0, 0, 0, 0.302);
 }
 
@@ -1354,6 +1355,100 @@ td img {
   content: "- ";
   font-size: 16px;
   color: #ffffff;
+}
+
+#skin {
+  background-color: #e6eff4;
+  padding: 5rem 4rem;
+}
+
+#skin h2 {
+  color: #3a3a3a;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+}
+
+#skin p {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  line-height: 3.5rem;
+}
+
+#skin p:last-child {
+  margin-top: 3rem;
+}
+
+.container-cards-skins {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.card-skin {
+  box-shadow: 0 0 2px #424242c2;
+  max-width: 350px;
+  padding: 2rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-skin img {
+  min-width: 360px;
+}
+
+@keyframes animaSombraSkin {
+  0% {
+    -webkit-filter: drop-shadow(0px 0px 5px #3fa5ff);
+    filter: drop-shadow(0px 0px 8px #3fa5ff);
+  }
+  50% {
+    -webkit-filter: drop-shadow(0px 0px 5px #256eae);
+    filter: drop-shadow(0px 0px 8px #256eae);
+  }
+  100% {
+    -webkit-filter: drop-shadow(0px 0px 5px #123c60);
+    filter: drop-shadow(0px 0px 8px #123c60);
+  }
+}
+
+@keyframes crescerVoltar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-skin img:hover,
+.card-skin img:focus {
+  animation: animaSombraSkin 1s alternate infinite,
+    crescerVoltar 2s ease-in-out infinite;
+}
+
+#skin h3 a {
+  color: #3a3a3a;
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 2rem 0 3rem 0;
+}
+
+#skin h3 a:hover {
+  color: #0054a8;
+  text-decoration: underline;
 }
 
 .container-imagens-fundo-fora {
@@ -1549,7 +1644,7 @@ details p {
   flex-wrap: wrap;
 }
 
-@keyframes animaSombra {
+@keyframes animaSombraLogin {
   0% {
     -webkit-filter: drop-shadow(0px 0px 5px #bb00ff);
     filter: drop-shadow(0px 0px 5px #bb00ff);
@@ -1567,7 +1662,7 @@ details p {
 .container-contato figure img {
   min-width: 300px;
   max-width: 350px;
-  animation: animaSombra 2s alternate infinite;
+  animation: animaSombraLogin 2s alternate infinite;
 }
 
 form {
