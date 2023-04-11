@@ -1173,7 +1173,7 @@ td img {
 
 #tutorial {
   background: url(../assets/fundo-bloco-cinza.png);
-  padding: 7rem 4rem;
+  padding: 10rem 4rem 5rem 4rem;
   color: #ffffff;
 }
 
@@ -1359,7 +1359,7 @@ td img {
 
 #skin {
   background-color: #e6eff4;
-  padding: 5rem 4rem;
+  padding: 10rem 4rem 5rem 4rem;
 }
 
 #skin h2 {
@@ -1624,7 +1624,7 @@ details p {
 
 #contato {
   background-color: #e6eff4;
-  padding: 8rem 4rem 5rem 4rem;
+  padding: 10rem 4rem 5rem 4rem;
 }
 
 #contato h2 {
