@@ -215,6 +215,7 @@ a button {
 .container-nav button,
 form button:hover,
 form button:focus {
+  will-change: transform;
   animation: pulse 1s infinite;
 }
 
@@ -1438,6 +1439,7 @@ td img {
 
 .card-skin img:hover,
 .card-skin img:focus {
+  will-change: transform;
   animation: animaSombraSkin 1s alternate infinite,
     crescerVoltar 2s ease-in-out infinite;
 }
@@ -1667,6 +1669,7 @@ details p {
 .container-contato figure img {
   min-width: 300px;
   max-width: 350px;
+  will-change: transform;
   animation: animaSombraLogin 2s alternate infinite;
 }
 
