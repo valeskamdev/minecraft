@@ -1863,49 +1863,8 @@ footer p:last-child {
   align-items: center;
 }
 
-.container-genero {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-bottom: 1.6rem;
-  flex-wrap: wrap;
-}
-
-.genero {
-  background: rgb(129, 127, 127);
-  border: 0.125rem solid #313233;
-  box-shadow: 0 0.25rem 0 rgba(0, 0, 0, 0.251),
-    inset -0.25rem -0.25rem 0 rgba(0, 0, 0, 0.302),
-    inset 0.25rem 0.25rem 0 hsla(0, 0%, 100%, 0.2);
-  border-radius: 3px;
-  margin-top: 0.5rem;
-  /* width: 150px; */
-  padding: 1rem 1.5rem;
-}
-
 input[type="radio"] {
   accent-color: #3c8527;
-}
-
-.genero,
-.genero input,
-.genero label {
-  cursor: pointer;
-}
-
-.genero label {
-  display: inline-block;
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
-}
-
-.genero span {
-  margin-left: 0.5rem;
-}
-
-.genero {
-  display: flex;
-  align-items: center;
 }
 
 .form-login {
@@ -1921,8 +1880,7 @@ input[type="radio"] {
   text-align: center;
 }
 
-.form-login label:not(.container-genero label),
-.form-login p {
+.form-login label {
   font-size: 1.7rem;
   font-weight: 300;
   margin-bottom: 1rem;
@@ -2147,12 +2105,6 @@ input[type="radio"] {
   .perguntas-frequentes,
   .login {
     background-attachment: scroll;
-  }
-}
-
-@media screen and (max-width: 541px) {
-  .genero:last-child {
-    margin-top: 1.2rem;
   }
 }
 
