@@ -2111,6 +2111,12 @@ input[type="radio"] {
   }
 }
 
+@media screen and (max-width: 615px) {
+  footer nav ul {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 510px) {
   .container-nav h2 a img {
     max-width: 17rem;
@@ -2146,9 +2152,5 @@ input[type="radio"] {
 
   .centralizar-logo {
     width: unset;
-  }
-
-  footer nav ul {
-    flex-direction: column;
   }
 }
