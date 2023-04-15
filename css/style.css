@@ -2179,4 +2179,8 @@ input[type="radio"] {
   .centralizar-logo {
     width: unset;
   }
+
+  .card-bioma {
+    min-width: 340px;
+  }
 }
