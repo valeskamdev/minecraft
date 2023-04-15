@@ -51,8 +51,6 @@ document.addEventListener("click", function (event) {
   }
 });
 
-
-
 // cria um carrossel de imagens com botões de navegação "Próximo" e "Anterior". Ele define o espaço entre as imagens como 16 pixels e usa o método scrollBy() para mover o carrossel para a esquerda ou para a direita quando um dos botões é clicado. Além disso, ele verifica se o carrossel chegou ao fim para desativar o botão "Próximo" ou "Anterior" apropriado.
 
 const gap = -250;
@@ -98,3 +96,17 @@ prev.addEventListener("click", (e) => {
 let width = carousel.offsetWidth;
 window.addEventListener("resize", checkWidth);
 checkWidth();
+
+//mostra um botão de "subir" quando o usuário rola a página entre as seções "sobre" e "contato
+
+let botao = document.querySelector(".botao-subir a");
+let sobre = document.getElementById("sobre"); 
+let contato = document.getElementById("contato");
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY >= sobre.offsetTop && window.scrollY < contato.offsetTop) {
+    botao.classList.remove('esconder');
+  } else {
+    botao.classList.add('esconder');
+  }
+})
