@@ -16,7 +16,7 @@ const header = document.querySelector("header");
 const h1 = header.querySelector(".logo");
 
 function verificaTamanhoTela() {
-  if (window.innerWidth <= 1329 && window.pageYOffset < 10) {
+  if (window.innerWidth <= 1470 && window.pageYOffset < 10) {
     h1.style.display = "block";
   } else {
     h1.style.display = "none";

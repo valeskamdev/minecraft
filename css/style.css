@@ -1408,16 +1408,13 @@ td img {
 
 @keyframes animaSombraSkin {
   0% {
-    -webkit-filter: drop-shadow(0px 0px 5px #3fa5ff);
-    filter: drop-shadow(0px 0px 8px #3fa5ff);
+    filter: drop-shadow(0px 0px 6px #3fa5ff);
   }
   50% {
-    -webkit-filter: drop-shadow(0px 0px 5px #256eae);
-    filter: drop-shadow(0px 0px 8px #256eae);
+    filter: drop-shadow(0px 0px 6px #256eae);
   }
   100% {
-    -webkit-filter: drop-shadow(0px 0px 5px #123c60);
-    filter: drop-shadow(0px 0px 8px #123c60);
+    filter: drop-shadow(0px 0px 6px #123c60);
   }
 }
 
@@ -1506,10 +1503,6 @@ td img {
   overflow: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
-}
-
-#carousel::-webkit-scrollbar {
-  height: 0;
 }
 
 #prev,
@@ -1653,15 +1646,12 @@ details p {
 
 @keyframes animaSombraLogin {
   0% {
-    -webkit-filter: drop-shadow(0px 0px 5px #bb00ff);
     filter: drop-shadow(0px 0px 5px #bb00ff);
   }
   50% {
-    -webkit-filter: drop-shadow(0px 0px 5px #aa3bd2);
     filter: drop-shadow(0px 0px 5px #aa3bd2);
   }
   100% {
-    -webkit-filter: drop-shadow(0px 0px 10px #793b8f);
     filter: drop-shadow(0px 0px 10px #793b8f);
   }
 }
@@ -1978,11 +1968,13 @@ input[type="radio"] {
   color: #64ca48;
 }
 
-@media screen and (max-width: 1328px) {
+@media screen and (max-width:1470px) {
   .container-nav h2 {
     display: none;
   }
+}
 
+@media screen and (max-width: 1328px) {
   h1 {
     display: block;
   }
@@ -2027,7 +2019,11 @@ input[type="radio"] {
   }
 }
 
-@media screen and (max-width: 875px) {
+@media screen and (max-width:930px) {
+  h1 a img {
+    display: none;
+  }
+
   .container-nav button {
     display: none;
   }
@@ -2079,20 +2075,18 @@ input[type="radio"] {
     align-items: center;
   }
 
-  h1 a img {
-    display: none;
-  }
-
   .container-nav h2 {
     display: block;
     width: 100%;
   }
 
   .container-nav h2 a img {
-    max-width: 19rem;
+    max-width: 22rem;
     margin-left: 2.6rem;
   }
+}
 
+@media screen and (max-width: 875px) {
   footer > ul li {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -2145,7 +2139,7 @@ input[type="radio"] {
 
 @media screen and (max-width: 510px) {
   .container-nav h2 a img {
-    max-width: 17rem;
+    max-width: 19rem;
   }
 
   .container-login-info ul li {
@@ -2161,7 +2155,7 @@ input[type="radio"] {
   }
 
   .container-nav h2 a img {
-    max-width: 15rem;
+    max-width: 18rem;
   }
 
   .container-login-info nav {
