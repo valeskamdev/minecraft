@@ -1503,6 +1503,10 @@ td img {
   overflow: auto;
   scroll-behavior: smooth;
   scrollbar-width: none;
+} 
+
+#carousel {
+  overflow-x: hidden;
 }
 
 #prev,
@@ -2083,6 +2087,10 @@ input[type="radio"] {
   .container-nav h2 a img {
     max-width: 22rem;
     margin-left: 2.6rem;
+  }
+
+  #carousel {
+    overflow-x: auto;
   }
 }
 
